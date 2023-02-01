@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #AF1B22;
+    color: white;
+    background-image: url(../img/bg2.jpg);
+    min-height: 4500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 6%;
+    background-color: rgba(19, 15, 16, 0.8);
+    border-bottom: 1px solid yellow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar .navbar-logo {
+    color: yellow;
+    width: 30%;
+
+}
+
+
+.navbar .navbar-logo img {
+    width: 10%;
+}
+
+.navbar .navbar-nav a {
+    color: whitesmoke;
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0 1.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: yellow;
+}
+
+.navbar .navbar-nav a::after {
+    content: ' ';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid burlywood;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+    -moz-transform: scaleX(0.5);
+    -ms-transform: scaleX(0.5);
+    -o-transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: aliceblue;
+    margin: 0 0.5rem;
+    /* width: 100%; */
+}
+
+
+.navbar .navbar-extra a:hover {
+    color: yellowgreen;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* page section */
+
+
+/* .landing-page {
+
+    display: flex;
+    align-items: center;
+} */
+
+
+.landing-page {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 1rem;
+    flex: 1;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .content .content-description {
+    flex: 1 1;
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+.landing-page .content .content-description .title {
+    font-size: 5rem;
+    margin-block: 1rem;
+    margin-bottom: 4rem;
+
+}
+
+
+.landing-page .content .content-description p {
+    line-height: 3rem;
+    font-size: 1.9rem;
+}
+
+.landing-page .content .content-description button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: rgba(19, 15, 16, 0.8);
+    cursor: pointer;
+    transition: all .15s ease-in;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+}
+
+.landing-page .content .content-description button:hover {
+    border: 3px solid #2D3E50;
+    color: #2D3E50;
+    background-color: transparent;
+}
+
+.landing-page .content .content-image {
+    flex: 1;
+    display: flex;
+}
+
+
+/* end landing page */
+
+/* tentang */
+.about,
+.pengurus .prestasi {
+    padding: 6rem 7% 1.4rem;
+
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.pengurus h2,
+.prestasi h2,
+.dev h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.about h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 100;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 10rem;
+    font-size: 80%;
+}
+
+.about .row .about-img img {
+    padding-right: 4rem;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 0 1rem;
+}
+
+/* end Tentang */
+
+/* pengurus */
+.pengurus .row,
+.prestasi .row,
+.dev .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+
+}
+
+.pengurus .row .pengurus-card {
+    text-align: center;
+    padding: 4rem 2rem 4rem 4rem
+}
+
+.pengurus .row .pengurus-card img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.pengurus .row .pengurus-card .card-title {
+    margin-top: 1rem auto 0.5rem;
+    font-size: 2rem;
+}
+
+.pengurus .row .pengurus-card .card-title2 {
+    margin-top: 1rem auto 0.5rem;
+    font-size: 1.7rem;
+}
+
+.pengurus .row .pengurus-card .name {
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+/* prestasi */
+
+.prestasi .row .daftar .juara {
+    margin-top: 1rem auto 0.5rem;
+    font-size: 1.7rem;
+    color: yellow;
+}
+
+.prestasi .list-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.prestasi .row .daftar {
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem
+}
+
+li {
+    margin-top: 2rem auto 0.5rem;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+}
+
+/* end prestasi */
+
+/* aside */
+.dev .row .dev-box {
+    width: 400px;
+    padding: 20px;
+    background-color: #8b1f1f;
+    border: 1px solid rgb(209, 222, 22);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 30px;
+
+}
+
+.dev .row img {
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.dev .row .dev-box p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dev h1 {
+    margin-top: 54rem;
+}
+
+.dev .row button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 99px;
+    background-color: rgba(12, 68, 223, 0.8);
+    cursor: pointer;
+    transition: all .15s ease-in;
+    -webkit-border-radius: 99px;
+    -moz-border-radius: 99px;
+    -ms-border-radius: 99px;
+    -o-border-radius: 99px;
+}
+
+.dev .row button:hover {
+    border: 3px solid #2D3E50;
+    color: #2D3E50;
+    background-color: transparent;
+}
+
+
+
+/* end aside */
+
+
+/* footer */
+footer {
+    padding: 20px;
+    color: #fff;
+    background-color: rgb(33, 9, 9);
+    bottom: 0;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width:1280px) {
+    html {
+        font-size: 75%;
+    }
+
+    .landing-page {
+        margin: auto;
+    }
+
+    .landing-page .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .landing-page .content .content-description .title {
+        font-size: 3rem;
+    }
+
+    .landing-page .content .content-description p {
+        font-size: 1rem;
+    }
+
+    .landing-page .content .content-image {
+        order: -2;
+    }
+
+    .landing-page .content .content-image img {
+        width: 55%;
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+}
+
+/* tablet */
+@media screen and (max-width:758px) {
+    html {
+        font-size: 62.5%;
+        margin-right: -15rem;
+    }
+
+
+    #hamburger-menu {
+        display: inline-block;
+
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: whitesmoke;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: rgb(104, 18, 18);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+        -webkit-transform: scaleX(0.2);
+        -moz-transform: scaleX(0.2);
+        -ms-transform: scaleX(0.2);
+        -o-transform: scaleX(0.2);
+    }
+
+    .navbar .navbar-logo img {
+        width: 50%;
+    }
+
+    .landing-page {
+        margin: auto;
+    }
+
+    .landing-page .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .landing-page .content .content-description .title {
+        font-size: 3rem;
+    }
+
+    .landing-page .content .content-description p {
+        font-size: 1rem;
+    }
+
+    .landing-page .content .content-image {
+        order: -2;
+    }
+
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .about .row .about-img img {
+        padding-right: 4rem;
+        width: 110%;
+        border-radius: 17%;
+        -webkit-border-radius: 17%;
+        -moz-border-radius: 17%;
+        -ms-border-radius: 17%;
+        -o-border-radius: 17%;
+    }
+
+}
+
+/* Hp */
+@media (max-width:450px) {
+    html {
+        font-size: 55%;
+        margin-right: -3rem;
+    }
+
+
+}
